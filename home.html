@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Street Style Store-Home Page</title>
+  <link rel="icon" href="images/fevicon1_circular.png" class="rounded-circle" width="64" height="64"
+    alt="circular icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  
+  .fixed-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+  }
+
+  .nav-link {
+    font-weight: 600;
+    color: black;
+  }
+
+  .scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-inner img {
+    height: 450px;
+    object-fit: fill;
+
+  }
+
+  .circle-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .item-label {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 500;
+  }
+
+  .badge-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -30%);
+  }
+
+  .item-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .item-wrapper,
+  .scroll-container,
+  .carousel-inner {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+  .video-wrapper video {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+  display: block;
+}
+.space {
+  display: inline-block;  
+  width: 20px;  
+  height: 1px; 
+}
+
+</style>
+
+<body>
+  
+  <div class="panel1 w-100 text-center text-white d-flex justify-content-center align-items-center fw-bold fixed-top" 
+  style="background-color: rgb(2, 2, 46); height: 50px;">
+<p class="m-0">Trend First. Always</p>
+</div>
+
+
+ 
+  <nav class="navbar bg-body-tertiary fixed-topbar  "  style="position: fixed; top: 50px; width: 100%; z-index: 1030;">
+    <div class="container-fluid">
+      
+      <img src="images/fevicon1.png" style="margin-left:2px;" alt="Logo" width="40" height="30"
+        class="d-inline-block align-text-top">
+      <form class="d-flex w-50" role="search" style="margin-right: 40px;">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <div class="d-flex align-items-center gap-1">
+        <i  class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Street Style Store</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+                <a class="nav-link" href="user.html">Sign In / Sign Up</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">New Arrival</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shoes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Clothing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hot & Trending</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Grab & Go</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Winter Clearance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Boots</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Accessories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop The Reel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Boutique</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="user.html">Sign In / Sign Up</a>
+              </li>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="scroll-container d-flex gap-1 py-1 " style="margin-top: 100px;">
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/new-arrival.webp" alt="New Arrival" style="width: 150px; height: 150px;">
+        <p>New Arrivals</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/shoes.webp" alt="Shoes" style="width: 150px; height: 150px;">
+        <p>Shoes</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/clothing.webp" alt="Clothing" style="width: 150px; height: 150px;">
+        <p>Clothing</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/hotandTrending.webp" alt="Hot and Trending" style="width: 150px; height: 150px;">
+        <p>Hot & Trending</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/GrabandGoCover_10Mar.webp" alt="Grab and Go" style="width: 150px; height: 150px;">
+        <p>Grab & Go</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/sale.webp" alt="Sale" style="width: 150px; height: 150px;">
+        <p>Winter Clearance</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/BootsIcon.webp" alt="Boots" style="width: 150px; height: 150px;">
+        <p>Boots</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/accessery.webp" alt="Accessories" style="width: 150px; height: 150px;">
+        <p>Accessories</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/shop_the_reel.webp" alt="Shop The Reel" style="width: 150px; height: 150px;">
+        <p>Shop The Reel</p>
+      </div>
+
+      <div class="cards text-center flex-shrink-0">
+        <img src="images/sss-boutique.webp" alt="Boutique" style="width: 150px; height: 150px;">
+        <p>Boutique</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators ">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/003242ee-293b-4f9f-8547-3c374757905c2025-04-21.jpg" class="d-block mx-auto w-75" alt="...">
+
+      </div>
+      <div class="carousel-item">
+        <img src="images/4for999ClothingCover_1Mar.webp" class="d-block mx-auto  w-75" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/2for899Cover_14April.webp" class="d-block mx-auto w-75" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+</body>
+<div class="d-flex align-items-center my-4">
+  <div class="flex-grow-1 border-top border-dark"></div>
+  <span class="mx-4 text-dark fw-bold "><strong><em>CLOTHING</em></strong></span>
+  <div class="flex-grow-1 border-top border-dark"></div>
+</div>
+
+
+<div class="container py-0">
+  <div class="row text-center">
+
+  
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <span class="badge bg-danger badge-top-left">New</span>
+      <img src="images/clothing.webp" alt="View All" class="circle-img">
+      <div class="item-label">View All</div>
+    </div>
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <span class="badge bg-danger badge-top-left">New</span>
+      <img src="images/2for899.webp" alt="2 for 899 Tees" class="circle-img">
+      <div class="item-label">2 for 899 Tees</div>
+    </div>
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <img src="images/Dresses.png" alt="Dresses" class="circle-img">
+      <div class="item-label">Dresses</div>
+    </div>
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <img src="images/Tops.png" alt="Winter Clearance" class="circle-img">
+      <div class="item-label">Tops</div>
+    </div>
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <img src="images/Bottoms.png" alt="Bottoms" class="circle-img">
+      <div class="item-label">Bottoms</div>
+    </div>
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <img src="images/Jumpsuits.png" alt="Jumpsuits" class="circle-img">
+      <div class="item-label">Jumpsuits</div>
+    </div>
+
+    <div class="col-4 col-sm-3 col-md-2 item-wrapper">
+
+      <img src="images/Co-ord-Sets.png" alt="Co-ord-Sets" class="circle-img">
+      <div class="item-label">Co-Ord-Sets</div>
+    </div>
+
+    <div class="col-4 col-sm-3 col-md-2 item-wrapper">
+      <span class="badge bg-warning text-dark badge-top-left">Sale</span>
+
+      <img src="images/winter_collection_new.webp" alt="Winter Clearance" class="circle-img">
+      <div class="item-label">Winter Clearance</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="d-flex align-items-center my-4">
+  <div class="flex-grow-1 border-top border-dark"></div>
+  <span class="mx-4 text-dark fw-bold "><strong><em>SHOES</em></strong></span>
+  <div class="flex-grow-1 border-top border-dark"></div>
+</div>
+
+<div class="container py-0">
+  <div class="row text-center">
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+
+      <img src="images/shoes.webp" alt="View All" class="circle-img">
+      <div class="item-label">View All</div>
+    </div>
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <span class="badge bg-danger badge-top-left">New</span>
+      <img src="images/Flats.webp" alt="Starting @ 3 for 1199" class="circle-img">
+      <div class="item-label">Starting @ 3 for 1199</div>
+    </div>
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <img src="images/BootsIcon_22June.jpg" alt="Boots" class="circle-img">
+      <div class="item-label">Boots</div>
+    </div>
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <img src="images/SneakerIcon_25Mar.webp" alt="Sneakers" class="circle-img">
+      <div class="item-label">Sneakers</div>
+    </div>
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <span class="badge bg-danger badge-top-left">Sale</span>
+
+      <img src="images/ShoesSuperDealIconNew.jpg" alt="Shoes Super Deal" class="circle-img">
+      <div class="item-label">Shoes Super Deal</div>
+    </div>
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <img src="images/Heels_2_for_999_Icon22Feb.webp" alt="Heels_2_for_999" class="circle-img">
+      <div class="item-label">Starting @ 2 for 999</div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<div class="d-flex align-items-center my-4">
+  <div class="flex-grow-1 border-top border-dark"></div>
+  <span class="mx-4 text-dark fw-bold "><strong><em>BEAUTY & ACCESSORIES</em></strong></span>
+  <div class="flex-grow-1 border-top border-dark"></div>
+</div>
+
+<div class="container py-0">
+  <div class="row text-center">
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+
+      <img src="images/Jewellery_Super_Deal_Icon22Feb.webp" alt="Jewellery_Super_Deal" class="circle-img">
+      <div class="item-label">Jwellery Super Deals</div>
+    </div>
+
+
+    <div class="col-4 col-sm-6 col-md-2 item-wrapper">
+      <span class="badge bg-danger badge-top-left">New</span>
+      <img src="images/Bags_Icon22Feb.webp" alt="Bags" class="circle-img">
+      <div class="item-label">Bags</div>
+    </div>
+
+
+  </div>
+</div>
+<div class="d-flex align-items-center my-4">
+  <div class="flex-grow-1 border-top border-dark"></div>
+  <span class="mx-4 text-dark fw-bold "><strong><em>SHOP THE LOOK</em></strong></span>
+  <div class="flex-grow-1 border-top border-dark"></div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="video-wrapper">
+      <video width="100%" autoplay muted loop>
+        <source src="images/FIRST.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+      </video>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      
+      <div class="video-wrapper">
+      <video width="100%" autoplay muted loop>
+        <source src="images/SECOND.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="video-wrapper">
+      <video width="100%" autoplay muted loop>
+        <source src="images/third.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="video-wrapper">
+      <video width="100%" autoplay muted loop>
+        <source src="images/FOURTH.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="panel1 w-100 text-center bg-light fw-bold "><h3>STREET STYLE STORE</h3></div>
+
+  
+  
+  
+<div class="btn-group w-100">
+  <button 
+    type="button" 
+    class="btn text-bg-light p-3 d-flex justify-content-between align-items-center w-100 text-start dropdown-toggle" 
+    data-bs-toggle="dropdown" 
+    data-bs-display="static" 
+    aria-expanded="false">
+    <span><b>HELP</b></span>
+    <span class="ms-auto"></span>
+  </button>
+  
+  <ul class="dropdown-menu w-100">
+    <li><button class="dropdown-item" type="button">RETURN & EXCHANGE POLICY</button></li>
+    <li><button class="dropdown-item" type="button">SHIPPING POLICY</button></li>
+    <li><button class="dropdown-item" type="button">FAQ'S</button></li>
+    <li><button class="dropdown-item" type="button">TERMS & CONDITIONS</button></li>
+  </ul>
+</div>
+
+<div class="btn-group w-100">
+  <button 
+    type="button" 
+    class="btn text-bg-light p-3 d-flex justify-content-between align-items-center w-100 text-start dropdown-toggle" 
+    data-bs-toggle="dropdown" 
+    data-bs-display="static" 
+    aria-expanded="false">
+    <span><b>ABOUT STREET STYLE STORE</b></span>
+    <span class="ms-auto"></span>
+  </button>
+  
+  <ul class="dropdown-menu w-100">
+    <li><button class="dropdown-item" type="button">ABOUT US</button></li>
+    <li><button class="dropdown-item" type="button">PRIVACY POLICY</button></li>
+    
+  </ul>
+</div>
+
+<div class="btn-group w-100">
+  <button 
+    type="button" 
+    class="btn text-bg-light p-3 d-flex justify-content-between align-items-center w-100 text-start dropdown-toggle" 
+    data-bs-toggle="dropdown" 
+    data-bs-display="static" 
+    aria-expanded="false">
+    <span><b>CONNECT</b></span>
+    <span class="ms-auto"></span>
+  </button>
+
+  <ul class="dropdown-menu w-100 p-3">
+    <li class="dropdown-item text-wrap">
+      <i class="fa-solid fa-location-dot me-2"></i>
+      Office No.356, Aggarwal Metro Heights,<br>
+      Netaji Subhash Place, Pitampura,<br>
+      North West Delhi, Delhi-110034
+    </li>
+    
+    <li class="dropdown-item">
+      <i class="fa-solid fa-phone me-2"></i>
+      +91-11-41171712 <span class="text-muted">(10 AM - 6 PM, Mon to Sat)</span>
+    </li>
+
+    <h6>Follow us on</h6>
+    <li class="dropdown-item d-flex ">
+      <i class="fa-brands fa-instagram"></i>
+    </li>
+
+    <li class="dropdown-item">
+      <i class="fab fa-facebook-f me-2"></i>
+    </li>
+  </ul>
+</div>
+<span class="space"></span>  
+
+
+<div class=" d-flex justify-content-between my-auto w-100 px-5 fixed-bottom ">
+  <div class="d-flex flex-column align-items-center">
+    <i class="fa-solid fa-house"></i>
+    <span>Home</span>
+  </div>
+  <div class="d-flex flex-column align-items-center">
+    <i class="fa-solid fa-heart"></i>
+    <span>Favourites</span>
+  </div>
+  <div class="d-flex flex-column align-items-center">
+    <i class="fa-solid fa-phone"></i>
+    <span>Contact Us</span>
+  </div>
+  <div class="d-flex flex-column align-items-center">
+    <i class="fa-solid fa-user"></i>
+    <span>My Account</span>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>
